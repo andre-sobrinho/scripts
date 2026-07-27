@@ -266,7 +266,7 @@ cat > "$RSYSLOG_AUDIT_CONFIG" << EOF
 \$InputRunFileMonitor
 
 # Encaminhamento para SIEM
-:programname, isequal, "auditd" @@${SIEM_IP}:${SIEM_PORT}
+:programname, isequal, "auditd" @${SIEM_IP}:${SIEM_PORT}
 & stop
 
 # Backup local
